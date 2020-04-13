@@ -1,0 +1,62 @@
+---
+title: "Getting Started with binomial"
+author: "Gaston Sanchez"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(binomial)
+```
+
+## About `"binomial"`
+
+The package `"binomial"` is a simple package to compute binomial probabilities, binomial distributions, as well as summary measures of a binomial random variable.
+
+
+## Creating a binomial random variable
+
+You can begin by creating a binomial random variable object with the function `bin_variable()`:
+
+```{r}
+binvar1 <- bin_variable(10, 0.3)
+binvar1
+```
+
+The output of `bin_variable()` is an object of class `"binvar"`, which simply contains the parameters: number of trials, and probability of success.
+
+Once you have a `"binvar"` object, you can get summary measures such as the mean, variance, mode, skewness and kurtosis, via the function `summary()`:
+
+```{r}
+summary(binvar1)
+```
+
+
+## Binomial Probability
+
+To compute binomial probabilities, you should use the function `bin_probability`. This functions requires three inputs: number of successes, number of trials, and probability of success.
+
+For example, say you want to compute the probability of 3 heads when tossing a fair coin 5 times:
+
+```{r}
+bin_probability(3, 5, 0.5)
+```
+
+If instead of a fair coin you suppose tossing a loaded coin with probability of heads 0.7, then:
+
+```{r}
+bin_probability(3, 5, 0.7)
+```
+
+You can also use `bin_probability()` to compute the probabilities for a range of successes. For example, the probabilities of less than 3 heads in 5 tosses of a fair coin is:
+
+```{r}
+bin_probability(0:3, 5, 0.5)
+```
+
+

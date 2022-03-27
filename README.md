@@ -8,6 +8,20 @@ provides functions for calculating probabilities of a Binomial random
 variable, and related calculations such as the probability distribution,
 the expected value, variance, mode, etc.
 
+
+## Donation
+
+As a Data Science and Statistics educator, I love to share the work I do. 
+Each month I spend dozens of hours curating learning materials and computational
+tools like this R package. If you find any value and usefulness in `binomial`, 
+please consider making a 
+<a href="https://www.paypal.com/donate?business=ZF6U7K5MW25W2&currency_code=USD" target="_blank">one-time donation---via paypal---in any amount</a> 
+(e.g. the amount you would spend inviting me a coffee or any other drink). 
+Your support really matters.
+
+<a href="https://www.paypal.com/donate?business=ZF6U7K5MW25W2&currency_code=USD" target="_blank"><img src="https://www.gastonsanchez.com/images/donate.png" width="140" height="60"/></a>
+
+
 ## Motivation
 
 The creation of this package was used as a project assignment in one of
